@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes import crawler, events
+from app.routes import crawler
 
-app = FastAPI(title="Pathfinder API")
+app = FastAPI()
 
-# Basic CORS setup
+# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -13,7 +13,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(events.router, prefix="/api/events", tags=["events"])
+# Include routers
+app.include_router(crawler.router, prefix="/api/crawler", tags=["crawler"])
+
 
 @app.get("/")
 async def root():
