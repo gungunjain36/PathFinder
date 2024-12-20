@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.services.crawler import crawl_hackathons
-from app.services.processor import process_stored_files
+# from app.services.processor import process_stored_files
 
 router = APIRouter()
 
@@ -12,6 +12,8 @@ async def trigger_crawl():
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
 
 # Create a /process endpoint that processes the HTML files that were previously crawled and stored.
 # It uses an LLM (Language Learning Model) to extract structured information about
