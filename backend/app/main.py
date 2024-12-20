@@ -2,12 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import crawler
 
-app = FastAPI()
+app = FastAPI()  
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],    
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -24,8 +24,3 @@ async def root():
         "version": "0.1.0"
     }
 
-"""
-TODO:
-- Add basic error handling
-- Add simple request logging
-"""
