@@ -56,7 +56,7 @@ function Hero() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 lg:mt-24">
             {[
-              ['100+', 'Active Events'],
+              ['10+', 'Active Events'],
               ['24/7', 'Updates'],
               ['Global', 'Coverage'],
             ].map(([stat, label]) => (

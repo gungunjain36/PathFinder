@@ -3,6 +3,8 @@ import EventCard from './components/EventCard'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Filter from './components/Filter'
+import Documentation from './components/Documentation'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   const [events, setEvents] = useState([])
@@ -46,19 +48,27 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-primary-50">
       <Navbar />
-      <Hero />
-      <main className="container mx-auto px-4 py-16">
-        <Filter 
-          selectedType={selectedType} 
-          setSelectedType={setSelectedType}
-          types={eventTypes}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEvents.map((event, index) => (
-            <EventCard key={index} event={event} />
-          ))}
-        </div>
-      </main>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <main className="container mx-auto px-4 py-16">
+              <Filter 
+                selectedType={selectedType} 
+                setSelectedType={setSelectedType}
+                types={eventTypes}
+              />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredEvents.map((event, index) => (
+                  <EventCard key={index} event={event} />
+                ))}
+              </div>
+            </main>
+          </>
+        } />
+        <Route path="/docs" element={<Documentation />} />
+      
+      </Routes>
     </div>
   )
 }

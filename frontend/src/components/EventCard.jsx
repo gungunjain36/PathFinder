@@ -1,3 +1,5 @@
+import { createGoogleCalendarUrl } from '../utils/calendar';
+
 function EventCard({ event }) {
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -42,6 +44,13 @@ function EventCard({ event }) {
     >
       {children}
     </a>
+  );
+
+  const CalendarIcon = () => (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" 
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
   );
 
   return (
@@ -114,6 +123,16 @@ function EventCard({ event }) {
               <span>View Source</span>
             </ActionButton>
           )}
+          
+          {/* Add to Calendar Button - Simplified */}
+          <ActionButton 
+            href={createGoogleCalendarUrl(event)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CalendarIcon />
+            <span>Add to Calendar</span>
+          </ActionButton>
         </div>
       </div>
     </div>
@@ -121,13 +140,6 @@ function EventCard({ event }) {
 }
 
 // Icons Components
-const CalendarIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" 
-          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-  </svg>
-);
-
 const LocationIcon = () => (
   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" 
