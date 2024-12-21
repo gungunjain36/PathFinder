@@ -81,7 +81,7 @@ async def process_html_with_llm() -> Dict:
                 )
 
                 raw_response = completion.choices[0].message.content
-                print(f"Raw API response for {filename}: {raw_response}")
+                # print(f"Raw API response for {filename}: {raw_response}")
 
                 # Filter and parse JSON response
                 try:
