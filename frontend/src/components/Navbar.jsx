@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-surface-200">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-surface-200">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
             {/* Logo/Icon */}
             <div className="flex items-center">
               <svg 
@@ -36,23 +38,31 @@ function Navbar() {
             <span className="font-display text-xl font-medium text-surface-900">
               PathFinder AI
             </span>
-          </div>
+          </Link>
 
-          <a 
-            href="https://twitter.com/Gungun__23" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-4 py-2 rounded-lg
-                     bg-surface-50 hover:bg-surface-100 
-                     text-surface-600 hover:text-primary-500 
-                     ring-1 ring-surface-200 hover:ring-primary-200
-                     transition-all duration-300"
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            <span>Follow our Bot</span>
-          </a>
+          <div className="flex items-center gap-6">
+            <Link 
+              to="/docs" 
+              className="text-surface-600 hover:text-primary-500 transition-colors duration-300"
+            >
+              Documentation
+            </Link>
+            <a 
+              href="https://twitter.com/Gungun__23" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg
+                       bg-surface-50 hover:bg-surface-100 
+                       text-surface-600 hover:text-primary-500 
+                       ring-1 ring-surface-200 hover:ring-primary-200
+                       transition-all duration-300"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span>Follow our Bot</span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
