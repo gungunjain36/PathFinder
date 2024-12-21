@@ -5,23 +5,26 @@ function EventCard({ event }) {
 
   const Badge = ({ type }) => (
     <span className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap
-      ${type === 'hackathon' ? 'bg-blue-500/10 text-blue-400 ring-1 ring-blue-400/30' :
-        type === 'conference' ? 'bg-purple-500/10 text-purple-400 ring-1 ring-purple-400/30' :
-        'bg-gray-500/10 text-gray-400 ring-1 ring-gray-400/30'}`}
+      ${type === 'hackathon' 
+        ? 'bg-primary-100 text-primary-700 ring-1 ring-primary-200' 
+        : type === 'conference' 
+        ? 'bg-purple-100 text-purple-700 ring-1 ring-purple-200'
+        : 'bg-surface-100 text-surface-700 ring-1 ring-surface-200'}`}
     >
       {capitalizeFirstLetter(type)}
     </span>
   );
 
-  const InfoItem = ({ icon, text, color = "blue" }) => (
-    <div className="flex items-center gap-2 text-sm text-gray-400">
-      <span className={`text-${color}-400 flex-shrink-0`}>{icon}</span>
+  const InfoItem = ({ icon, text, color = "primary" }) => (
+    <div className="flex items-center gap-2 text-sm text-surface-600">
+      <span className={`text-${color}-500 flex-shrink-0`}>{icon}</span>
       <span className="truncate">{text}</span>
     </div>
   );
 
   const TechBadge = ({ tech }) => (
-    <span className="px-2 py-1 bg-gray-800/50 text-gray-300 rounded-md text-xs ring-1 ring-gray-700">
+    <span className="px-2 py-1 bg-surface-100/80 text-surface-600 rounded-md text-xs 
+                   ring-1 ring-surface-200 hover:bg-surface-200/80 transition-colors duration-200">
       {capitalizeFirstLetter(tech)}
     </span>
   );
@@ -34,28 +37,32 @@ function EventCard({ event }) {
       className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
         transition-all duration-300 hover:scale-[1.02] flex-1 justify-center
         ${primary 
-          ? 'bg-blue-500/20 text-blue-400 ring-1 ring-blue-500/30 hover:bg-blue-500/30' 
-          : 'bg-gray-800/50 text-gray-400 ring-1 ring-gray-700 hover:bg-gray-700/50'}`}
+          ? 'bg-primary-500 text-white hover:bg-primary-600' 
+          : 'bg-surface-100 text-surface-600 hover:bg-surface-200 ring-1 ring-surface-200'}`}
     >
       {children}
     </a>
   );
 
   return (
-    <div className="group bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden
-                    ring-1 ring-gray-800 hover:ring-gray-700
+    <div className="group bg-white backdrop-blur-sm rounded-xl overflow-hidden
+                    ring-1 ring-surface-200 hover:ring-primary-200 hover:shadow-lg
                     transition-all duration-300 h-full flex flex-col">
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-5 flex flex-col flex-grow relative overflow-hidden">
+        {/* Decorative gradient blur */}
+        <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary-100 rounded-full blur-3xl opacity-0 
+                      group-hover:opacity-30 transition-opacity duration-500"></div>
+
         {/* Header Section */}
         <div className="mb-4">
           <div className="flex justify-between items-start gap-4 mb-2">
-            <h2 className="text-lg font-medium text-gray-200 group-hover:text-blue-400 
+            <h2 className="font-display text-lg font-medium text-surface-900 group-hover:text-primary-600 
                          transition-colors duration-300 line-clamp-1">
               {event.title}
             </h2>
             <Badge type={event.event_type} />
           </div>
-          <p className="text-sm text-gray-400 line-clamp-2 min-h-[40px]">
+          <p className="text-sm text-surface-600 line-clamp-2 min-h-[40px]">
             {event.description}
           </p>
         </div>
@@ -87,7 +94,7 @@ function EventCard({ event }) {
               <TechBadge key={index} tech={tech} />
             ))}
             {event.tech_stack.length > 3 && (
-              <span className="text-xs text-gray-500 self-center">
+              <span className="text-xs text-surface-500 self-center font-medium">
                 +{event.tech_stack.length - 3}
               </span>
             )}
@@ -95,10 +102,10 @@ function EventCard({ event }) {
         </div>
 
         {/* Actions Section */}
-        <div className="flex gap-2 mt-4 pt-4 border-t border-gray-800">
+        <div className="flex gap-2 mt-4 pt-4 border-t border-surface-200">
           {event.registration.url !== "unknown" ? (
             <ActionButton href={event.registration.url} primary>
-              <span>Register</span>
+              <span>Register Now</span>
               <ArrowIcon />
             </ActionButton>
           ) : (
