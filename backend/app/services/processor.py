@@ -41,14 +41,12 @@ This module will be crucial for transforming raw HTML data into structured, usab
 and preparing it for social media distribution.
 """
 
-
-
-
 from fastapi import FastAPI, HTTPException
 import json
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
+import time
 
 # Load environment variables
 load_dotenv()
@@ -83,7 +81,7 @@ async def process_html():
             }
 
         for file_name in files:
-            try:
+            # try:
                 # Read file content
                 file_path = os.path.join(HTML_DIR, file_name)
                 with open(file_path, "r", encoding="utf-8") as file:
@@ -112,33 +110,43 @@ async def process_html():
                 {content}
                 """
 
-                # Query the GPT API
-                gpt_response = client.chat.completions.create(
-                    model="llama3.1:70b",
-                    messages=[
-                        {"role": "system", "content": "You are an expert at extracting tech event information from web pages. Return only valid JSON."},
-                        {"role": "user", "content": prompt}
-                    ]
-                )
+                # Query the GPT API with retry mechanism
+                retries = 3
+                for attempt in range(retries):
+                    try:
+                        gpt_response = client.chat.completions.create(
+                            model="llama3.1:70b",
+                            messages=[
+                                {"role": "system", "content": "You are an expert at extracting tech event information from web pages. Return only valid JSON."},
+                                {"role": "user", "content": prompt}
+                            ]
+                        )
 
-                # Parse GPT response
-                response_text = gpt_response["choices"][0]["message"]["content"].strip()
-                try:
-                    event_data = json.loads(response_text)
-                except json.JSONDecodeError:
-                    event_data = {"error": "GPT response is not valid JSON", "gpt_raw": response_text}
+                        # Log the response to inspect it
+                        print("GPT Response:", gpt_response)
 
-                # Append the result
-                responses.append({
-                    "file_name": file_name,
-                    "event_data": event_data,
-                })
+                        # Parse GPT response
+                        response_text = gpt_response['choices'][0]['message']['content'].strip()  # Correct access
+                        try:
+                            event_data = json.loads(response_text)
+                        except json.JSONDecodeError:
+                            event_data = {"error": "GPT response is not valid JSON", "gpt_raw": response_text}
 
-            except Exception as e:
-                responses.append({
-                    "file_name": file_name,
-                    "error": f"Failed to process file: {str(e)}",
-                })
+                        # Append the result
+                        responses.append({
+                            "file_name": file_name,
+                            "event_data": event_data,
+                        })
+                        break  # Break out of retry loop if successful
+                    except Exception as e:
+                        if attempt < retries - 1:
+                            print(f"Attempt {attempt + 1} failed, retrying...")
+                            time.sleep(2)  # wait before retry
+                        else:
+                            responses.append({
+                                "file_name": file_name,
+                                "error": f"Failed to process file: {str(e)}",
+                            })
 
         # Save responses to a JSON file
         output_file = os.path.join(OUTPUT_DIR, "responses.json")
@@ -153,3 +161,5 @@ async def process_html():
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing files: {str(e)}")
+
+

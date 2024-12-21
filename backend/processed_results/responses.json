@@ -1,202 +1,44 @@
 [
     {
-        "file_name": "hackathon_20241220_161108_coinband_io_blog_top_upcoming_cryptocurrency_and_b.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
+        "title": "Various",
+        "description": "Upcoming cryptocurrency and blockchain events",
+        "date": "unknown",
+        "registration": "unknown",
+        "prizes": "unknown",
+        "event_type": "various",
+        "mode": "unknown",
+        "tech_stack": [
+            "Blockchain",
+            "Cryptocurrency"
+        ],
+        "is_active": true,
+        "url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+        "processed_at": "2024-12-21T08:13:18.106551"
     },
     {
-        "file_name": "hackathon_20241220_161108_cryptoslate_com_press_releases_paris_blockchain_we.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
+        "title": "unknown",
+        "description": "unknown",
+        "date": "unknown",
+        "registration": "unknown",
+        "prizes": "unknown",
+        "event_type": "unknown",
+        "mode": "unknown",
+        "tech_stack": [],
+        "is_active": false,
+        "url": "https://cryptoslate.com/press-releases/paris-blockchain-week-2025-introduces-new-hybrid-hackathon-to-build-the-future-of-blockchain/",
+        "processed_at": "2024-12-21T08:13:23.786258"
     },
     {
-        "file_name": "hackathon_20241220_161108_medium_com_web3foundation_web3_summit_returns_to_f.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161109_bitpinas_com_tag_hackathon_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161111_www_eventbrite_com_d_india_blockchain_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161117_www_hindustantimes_com_cities_pune_news_students_o.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161120_www_scribd_com_document_794786651_Upcoming_Tech_Ev.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161125_www_hindustantimes_com_cities_noida_news_smart_ind.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161126_bestcolleges_indiatoday_in_news_detail_iit_kanpur_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161132_bestcolleges_indiatoday_in_news_detail_iit_kanpur_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161132_srwc_raisoni_net_techtrek_hackthon_2025_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161132_www_hindustantimes_com_cities_noida_news_smart_ind.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161136_bestcolleges_indiatoday_in_news_detail_iit_kanpur_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161136_www_hindustantimes_com_cities_noida_news_smart_ind.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161138_shardaevents_com_events_vivechana_20_national_case.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161141_www_wonderskool_com_index_php_blogdetail_1815_hack.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161148_coinband_io_blog_top_upcoming_cryptocurrency_and_b.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161148_cryptoslate_com_press_releases_paris_blockchain_we.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161148_dadatechgen_com_blog_build_the_future_of_blockchai.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161149_substack_com_home_post_p_153052506_utm_campaign_po.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161149_www_cryptotimes_io_2024_12_20_vyug_fest_india_move.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161150_easychair_org_cfp_topic_cgi_tid_670.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_161158_www_scribd_com_document_804006816_Rule_Book_for_AI.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162056_coinband_io_blog_top_upcoming_cryptocurrency_and_b.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162056_medium_com_web3foundation_web3_summit_returns_to_f.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162056_medium_com__EdgeMatrixChain_emc_hackathon_2024_fin.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162057_cryptoslate_com_press_releases_paris_blockchain_we.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162101_cse_noticebard_com_hackathon_indiaai_cyberguard_ai.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162101_www_hindustantimes_com_cities_pune_news_students_o.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162102_www_scribd_com_document_794786651_Upcoming_Tech_Ev.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162108_bestcolleges_indiatoday_in_news_detail_iit_kanpur_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162108_www_hindustantimes_com_cities_noida_news_smart_ind.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162108_www_prnewswire_com_apac_news_releases_unleashing_i.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162112_www_hindustantimes_com_cities_noida_news_smart_ind.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162113_bestcolleges_indiatoday_in_news_detail_iit_kanpur_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162147_bestcolleges_indiatoday_in_news_detail_iit_kanpur_.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162147_www_hindustantimes_com_cities_noida_news_smart_ind.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162148_shardaevents_com_events_internal_smart_india_hacka.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162149_www_wonderskool_com_index_php_blogdetail_1815_hack.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162153_coinband_io_blog_top_upcoming_cryptocurrency_and_b.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162153_cryptoslate_com_press_releases_paris_blockchain_we.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162154_dadatechgen_com_blog_build_the_future_of_blockchai.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162154_substack_com_home_post_p_153052506_utm_campaign_po.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162154_www_cryptotimes_io_2024_12_20_vyug_fest_india_move.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162155_easychair_org_cfp_topic_cgi_tid_670.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162200_www_scribd_com_document_794786651_Upcoming_Tech_Ev.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162200_www_scribd_com_document_804006816_Rule_Book_for_AI.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162233_dadatechgen_com_blog_build_the_future_of_blockchai.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162234_chainwire_org_2024_12_12_paris_blockchain_week_202.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
-    },
-    {
-        "file_name": "hackathon_20241220_162234_substack_com_home_post_p_153052506_utm_campaign_po.html",
-        "error": "Failed to process file: Error code: 404 - {'detail': 'Not Found'}"
+        "title": "Sample Hackathon",
+        "description": "",
+        "date": "January 15, 2024",
+        "registration": "unknown",
+        "prizes": "10,000",
+        "event_type": "hackathon",
+        "mode": "online",
+        "tech_stack": [],
+        "is_active": "unknown",
+        "url": "https://example.com/hackathon",
+        "processed_at": "2024-12-21T08:13:29.306250"
     }
 ]

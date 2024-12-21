@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.services.crawler import crawl_hackathons
-from app.services.processor import process_html
+from app.services.processor2 import process_html_with_llm
 # from app.services.processor import process_stored_files
 
 router = APIRouter()
@@ -21,11 +21,13 @@ async def trigger_crawl():
 # hackathons and tech events from the raw HTML content. The processing is done
 # asynchronously and returns the results. If any errors occur during processing,
 # it will raise an HTTP 500 error with the error details.
+
+
 @router.post("/process")
 async def trigger_process():
     """Trigger file processing"""
     try:
-        result = await process_html()
+        result = await process_html_with_llm()
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
