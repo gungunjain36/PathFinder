@@ -8,7 +8,7 @@ import time
 
 load_dotenv()
 
-class XBot:
+class XBot: 
     def __init__(self):
         # Get credentials from environment variables
         self.api_key = os.getenv("x_API_KEY")

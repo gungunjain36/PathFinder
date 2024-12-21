@@ -70,7 +70,7 @@
       "total_pool": "500,000 USD",
       "details": "unknown"
     },
-    "event_type": "conference",
+    "event_type": "hackathon",
     "mode": "online",
     "tech_stack": [
       "AI",
@@ -571,7 +571,7 @@
       "total_pool": "500,000 USD",
       "details": "unknown"
     },
-    "event_type": "developer camp",
+    "event_type": "hackathon",
     "mode": "online",
     "tech_stack": [
       "AI",
