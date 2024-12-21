@@ -1,10 +1,13 @@
 
 # PathFinder AI 
+![WhatsApp Image 2024-12-21 at 3 29 29 PM](https://github.com/user-attachments/assets/c0891279-e986-4588-b933-8e304e8cc63d)
 
 ## 1. Project Overview
 PathFinder AI is an intelligent tech event discovery platform designed to automate the process of finding, processing, and delivering relevant tech events to users. By leveraging web crawling, AI processing, and social media integration, it provides a seamless, user-friendly event discovery experience.
 
 ---
+![WhatsApp Image 2024-12-21 at 3 30 01 PM](https://github.com/user-attachments/assets/1628d053-e293-4212-b7a7-bbec0dd7a82a)
+![WhatsApp Image 2024-12-21 at 3 30 30 PM](https://github.com/user-attachments/assets/d7771b66-df38-4358-a6d8-8e2539bdc5bb)
 
 ## 2. Problem Statement
 Discovering relevant tech events is often:
@@ -20,6 +23,7 @@ Discovering relevant tech events is often:
 - Integrating with social media and calendar tools for better engagement.
 
 ---
+![WhatsApp Image 2024-12-21 at 3 30 40 PM](https://github.com/user-attachments/assets/619f13f4-62ae-4970-baf3-fa5baa30ff07)
 
 ## 3. System Components
 
