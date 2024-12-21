@@ -10,64 +10,65 @@ load_dotenv()
 
 class XBot:
     def __init__(self):
-        self.consumer_key = os.getenv("x_API_KEY")
-        self.consumer_secret = os.getenv("X_API_KEY_SECRET")
-        self.oauth = None
-        self.setup_oauth()
+        # Get credentials from environment variables
+        self.api_key = os.getenv("x_API_KEY")
+        self.api_secret = os.getenv("X_API_KEY_SECRET")
+        self.access_token = os.getenv("X_ACCESS_TOKEN")
+        self.access_token_secret = os.getenv("X_ACCESS_TOKEN_SECRET")
+        
+        # Validate credentials
+        if not all([self.api_key, self.api_secret, self.access_token, self.access_token_secret]):
+            raise ValueError("Missing required X API credentials in .env file")
+        
+        print("Initializing with credentials:")
+        print(f"API Key: {self.api_key[:8]}...")
+        print(f"Access Token: {self.access_token[:8]}...")
+        
+        # Create OAuth1Session with stored credentials
+        self.oauth = OAuth1Session(
+            client_key=self.api_key,
+            client_secret=self.api_secret,
+            resource_owner_key=self.access_token,
+            resource_owner_secret=self.access_token_secret
+        )
+        
+        # Verify credentials
+        self.verify_credentials()
 
-    def setup_oauth(self):
-        """Setup OAuth 1.0a authentication"""
+    def verify_credentials(self):
+        """Verify the credentials are working"""
         try:
-            # Get request token
-            request_token_url = "https://api.twitter.com/oauth/request_token?oauth_callback=oob&x_auth_access_type=write"
-            oauth = OAuth1Session(self.consumer_key, client_secret=self.consumer_secret)
-
-            try:
-                fetch_response = oauth.fetch_request_token(request_token_url)
-            except ValueError:
-                print("There may have been an issue with the consumer_key or consumer_secret.")
-                return
-
-            resource_owner_key = fetch_response.get("oauth_token")
-            resource_owner_secret = fetch_response.get("oauth_token_secret")
-            print("Got OAuth token:", resource_owner_key)
-
-            # Get authorization
-            base_authorization_url = "https://api.twitter.com/oauth/authorize"
-            authorization_url = oauth.authorization_url(base_authorization_url)
-            print("\nPlease go here and authorize:", authorization_url)
-            verifier = input("Paste the PIN here: ")
-
-            # Get the access token
-            access_token_url = "https://api.twitter.com/oauth/access_token"
-            oauth = OAuth1Session(
-                self.consumer_key,
-                client_secret=self.consumer_secret,
-                resource_owner_key=resource_owner_key,
-                resource_owner_secret=resource_owner_secret,
-                verifier=verifier,
+            print("\nVerifying credentials...")
+            print(f"Using API Key: {self.api_key[:8]}...")
+            print(f"Using API Secret: {self.api_secret[:8]}...")
+            print(f"Using Access Token: {self.access_token[:8]}...")
+            print(f"Using Access Token Secret: {self.access_token_secret[:8]}...")
+            
+            # Test endpoint
+            response = self.oauth.get(
+                "https://api.twitter.com/2/users/me",
+                headers={"Content-Type": "application/json"}
             )
-            oauth_tokens = oauth.fetch_access_token(access_token_url)
-
-            access_token = oauth_tokens["oauth_token"]
-            access_token_secret = oauth_tokens["oauth_token_secret"]
-
-            # Create the final OAuth session
-            self.oauth = OAuth1Session(
-                self.consumer_key,
-                client_secret=self.consumer_secret,
-                resource_owner_key=access_token,
-                resource_owner_secret=access_token_secret,
-            )
-            print("OAuth setup completed successfully!")
-
+            
+            print(f"\nResponse Status: {response.status_code}")
+            print(f"Response Headers: {dict(response.headers)}")
+            print(f"Response Body: {response.text}")
+            
+            if response.status_code == 200:
+                user_data = response.json()
+                print(f"\nSuccessfully authenticated as: {user_data.get('data', {}).get('username')}")
+            else:
+                print("\nAuthentication failed!")
+                print(f"Status Code: {response.status_code}")
+                print(f"Response: {response.text}")
+                raise ValueError("Failed to verify credentials")
+                
         except Exception as e:
-            print(f"Error setting up OAuth: {str(e)}")
+            print(f"\nError verifying credentials: {str(e)}")
             raise
 
     def format_event_tweet(self, event: Dict) -> str:
         """Format event data into an engaging tweet"""
-        
         # Get event details with fallbacks
         title = event.get('title', 'Upcoming Tech Event')
         date_info = event.get('date', {})
@@ -122,7 +123,6 @@ class XBot:
             
         # Ensure tweet is within character limit
         if len(tweet) > 280:
-            # Truncate while keeping URL intact
             url_index = tweet.rfind("More info:")
             if url_index > 0:
                 url_part = tweet[url_index:]
@@ -132,20 +132,31 @@ class XBot:
         return tweet
 
     def post_tweet(self, tweet_text: str) -> Dict:
-        """Post a tweet using X API v2"""
+        """Post a tweet using X API v2 with OAuth 1.0a"""
         try:
-            if not self.oauth:
-                return {"status": "error", "message": "OAuth not set up"}
-
+            # Endpoint for v2 tweets
+            url = "https://api.twitter.com/2/tweets"
+            
+            # Prepare payload
             payload = {"text": tweet_text}
+
+            # Add required headers
+            headers = {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+
+            # Make request
             response = self.oauth.post(
-                "https://api.twitter.com/2/tweets",
+                url,
                 json=payload,
+                headers=headers
             )
 
             if response.status_code != 201:
                 print(f"Error posting tweet: {response.status_code}")
-                print(response.text)
+                print(f"Response: {response.text}")
+                print(f"Request payload: {payload}")
                 return {"status": "error", "message": response.text}
 
             print(f"Tweet posted successfully!")
@@ -190,7 +201,49 @@ class XBot:
             print(f"Error posting events: {str(e)}")
             return results
 
+    def test_auth(self):
+        """Test authentication with a simple tweet"""
+        try:
+            print("\nTesting authentication with a test tweet...")
+            
+            # Simple test tweet
+            test_tweet = "Test tweet from Pathfinder Bot 🤖 " + datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            # Endpoint for v2 tweets
+            url = "https://api.twitter.com/2/tweets"
+            
+            # Prepare payload and headers
+            payload = {"text": test_tweet}
+            headers = {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+
+            # Make request
+            response = self.oauth.post(
+                url,
+                json=payload,
+                headers=headers
+            )
+
+            print(f"\nResponse Status: {response.status_code}")
+            print(f"Response Headers: {dict(response.headers)}")
+            print(f"Response Body: {response.text}")
+
+            return response.status_code == 201
+
+        except Exception as e:
+            print(f"\nError testing auth: {str(e)}")
+            return False
+
 if __name__ == "__main__":
-    bot = XBot()
-    results = bot.post_events(max_events=3)
-    print(json.dumps(results, indent=2))
+    try:
+        bot = XBot()
+        if bot.test_auth():
+            print("\nAuthentication test successful! Proceeding with event tweets...")
+            results = bot.post_events(max_events=1)  # Try one tweet first
+            print(json.dumps(results, indent=2))
+        else:
+            print("\nAuthentication test failed!")
+    except Exception as e:
+        print(f"\nError: {str(e)}")
