@@ -47,6 +47,7 @@ pydantic_core==2.27.2
 PyDispatcher==2.0.7
 pyee==12.0.0
 pyOpenSSL==24.3.0
+python-dotenv==1.0.1
 queuelib==1.7.0
 requests==2.32.3
 requests-file==2.1.0

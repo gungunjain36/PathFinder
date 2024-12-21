@@ -3,3 +3,4 @@ venv
 __pycache__/
 .DS_Store
 crawled_data/
+processed_results/
