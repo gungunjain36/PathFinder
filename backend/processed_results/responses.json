@@ -1,44 +1,611 @@
 [
-    {
-        "title": "Various",
-        "description": "Upcoming cryptocurrency and blockchain events",
-        "date": "unknown",
-        "registration": "unknown",
-        "prizes": "unknown",
-        "event_type": "various",
-        "mode": "unknown",
-        "tech_stack": [
-            "Blockchain",
-            "Cryptocurrency"
-        ],
-        "is_active": true,
-        "url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
-        "processed_at": "2024-12-21T08:13:18.106551"
+  {
+    "title": "Paris Blockchain Week 2025 Hackathon",
+    "description": "A dynamic competition designed to bring together global developers to create groundbreaking blockchain solutions",
+    "date": {
+      "start": "January 2025",
+      "end": "April 6, 2025"
     },
-    {
-        "title": "unknown",
-        "description": "unknown",
-        "date": "unknown",
-        "registration": "unknown",
-        "prizes": "unknown",
-        "event_type": "unknown",
-        "mode": "unknown",
-        "tech_stack": [],
-        "is_active": false,
-        "url": "https://cryptoslate.com/press-releases/paris-blockchain-week-2025-introduces-new-hybrid-hackathon-to-build-the-future-of-blockchain/",
-        "processed_at": "2024-12-21T08:13:23.786258"
+    "registration": {
+      "status": "open/unknown",
+      "url": "https://www.parisblockchainweek.com/"
     },
-    {
-        "title": "Sample Hackathon",
-        "description": "",
-        "date": "January 15, 2024",
-        "registration": "unknown",
-        "prizes": "10,000",
-        "event_type": "hackathon",
-        "mode": "online",
-        "tech_stack": [],
-        "is_active": "unknown",
-        "url": "https://example.com/hackathon",
-        "processed_at": "2024-12-21T08:13:29.306250"
-    }
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "cash prizes, tickets to Paris Blockchain Week 2025 and a chance to present their solutions on the PBW main stage, gaining global recognition"
+    },
+    "event_type": "hackathon",
+    "mode": "hybrid",
+    "tech_stack": [
+      "blockchain",
+      "web3",
+      "Dfinity ICP",
+      "COTI",
+      "Alephium"
+    ],
+    "eligibility": "developers, designers, and tech enthusiasts of all levels",
+    "organizer": "Paris Blockchain Week",
+    "source_url": "https://chainwire.org/2024/12/12/paris-blockchain-week-2025-introduces-new-hybrid-hackathon-to-build-the-future-of-blockchain/?__hstc=73468877.73bd3bee6fa385653ecd7c9674ba06f0.1731974400189.1731974400190.1731974400191.1&__hssc=73468877.2.1731974400192&__hsfp=1760752211",
+    "processed_at": "2024-12-21T10:56:20.040342"
+  },
+  {
+    "title": "Solana AI Hackathon",
+    "description": "Global online event focused on building AI agents and tooling on Solana, powered by SEND AI.",
+    "date": {
+      "start": "December 10",
+      "end": "December 23"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "210,000 USD",
+      "details": "Prizes range from $5k to $30k."
+    },
+    "event_type": "hackathon",
+    "mode": "online",
+    "tech_stack": [
+      "AI",
+      "Solana",
+      "Blockchain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "SEND AI and teams in the Solana ecosystem",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:57:11.051408"
+  },
+  {
+    "title": "AI Agents on BNB Chain: Standards, Innovation, Impact",
+    "description": "First-ever AI Agents on Chain Developer Camp, hosted by APRO Oracle and powered by the BNB Chain Ecosystem.",
+    "date": {
+      "start": "December 12, 2024",
+      "end": "January 10, 2025"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "500,000 USD",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "online",
+    "tech_stack": [
+      "AI",
+      "BNB Chain",
+      "Blockchain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "APRO Oracle and Bewater",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:57:11.051534"
+  },
+  {
+    "title": "HashKey Hacker House Taichi",
+    "description": "Hackathon to explore the innovative space of blockchain technology within a compliance framework.",
+    "date": {
+      "start": "December 20",
+      "end": "December 22"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "7,000 USD",
+      "details": "unknown"
+    },
+    "event_type": "hackathon",
+    "mode": "offline",
+    "tech_stack": [
+      "Blockchain",
+      "Compliance"
+    ],
+    "eligibility": "unknown",
+    "organizer": "HashKey",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:57:11.051537"
+  },
+  {
+    "title": "Polkadot Vietnam Hackathon 2025",
+    "description": "Hackathon to build innovative solutions using Polkadot, with tracks for DeFi, PayFi, and NFT.",
+    "date": {
+      "start": "December 10, 2024",
+      "end": "January 11, 2025"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "10,000 USD",
+      "details": "unknown"
+    },
+    "event_type": "hackathon",
+    "mode": "online",
+    "tech_stack": [
+      "Polkadot",
+      "DeFi",
+      "NFT"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:57:11.051539"
+  },
+  {
+    "title": "Blockchain & AI Expo",
+    "description": "A virtual event focused on the symbiosis of blockchain technology and artificial intelligence.",
+    "date": {
+      "start": "October 31, 2024",
+      "end": "October 31, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "online",
+    "tech_stack": [
+      "blockchain",
+      "artificial intelligence"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731581"
+  },
+  {
+    "title": "7th Blockchain International Scientific Conference ISC2025",
+    "description": "A key gathering for academics and industry leaders in blockchain, crypto assets, and decentralized economics.",
+    "date": {
+      "start": "April 4, 2025",
+      "end": "April 4, 2025"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "crypto assets",
+      "decentralized economics"
+    ],
+    "eligibility": "unknown",
+    "organizer": "British Blockchain Association",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731652"
+  },
+  {
+    "title": "Crypto Expo Europe",
+    "description": "One of the largest blockchain and cryptocurrency events in Eastern Europe.",
+    "date": {
+      "start": "March 3, 2025",
+      "end": "March 4, 2025"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "expo",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "cryptocurrency"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731655"
+  },
+  {
+    "title": "Next Block Expo",
+    "description": "One of Europe\u2019s leading blockchain events, focused on DeFi, NFT, Metaverse, Web3 gaming, and more.",
+    "date": {
+      "start": "May 19, 2025",
+      "end": "May 20, 2025"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "expo",
+    "mode": "offline",
+    "tech_stack": [
+      "DeFi",
+      "NFT",
+      "Metaverse",
+      "Web3 gaming"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731656"
+  },
+  {
+    "title": "Paris Blockchain Week",
+    "description": "A major event for blockchain experts and researchers, focusing on the latest developments in blockchain technology, Web3, NFT, and DeFi.",
+    "date": {
+      "start": "April 8, 2025",
+      "end": "April 10, 2025"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "Web3",
+      "NFT",
+      "DeFi"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731658"
+  },
+  {
+    "title": "Crypto Fest: Explore Cryptopia",
+    "description": "A major event for crypto enthusiasts and blockchain developers, featuring speakers, educational sessions, and exhibitions.",
+    "date": {
+      "start": "October 10, 2024",
+      "end": "October 12, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "festival",
+    "mode": "offline",
+    "tech_stack": [
+      "crypto",
+      "blockchain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731659"
+  },
+  {
+    "title": "Merge Madrid",
+    "description": "A major event focused on bringing together Web3 professionals from Europe and Latin America.",
+    "date": {
+      "start": "October 8, 2024",
+      "end": "October 10, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "Web3"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731664"
+  },
+  {
+    "title": "Blockchain Africa Conference",
+    "description": "A major event celebrating a decade of blockchain innovation in Africa.",
+    "date": {
+      "start": "October 22, 2024",
+      "end": "October 23, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731666"
+  },
+  {
+    "title": "Crypto EXPO Milan",
+    "description": "A major event for blockchain professionals, crypto enthusiasts, investors, and industry leaders.",
+    "date": {
+      "start": "November 21, 2024",
+      "end": "November 23, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "expo",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "crypto"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731667"
+  },
+  {
+    "title": "Australian Crypto Convention",
+    "description": "A major event for blockchain and cryptocurrency enthusiasts, featuring keynotes, workshops, and panel discussions.",
+    "date": {
+      "start": "November 23, 2024",
+      "end": "November 24, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "cryptocurrency"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731669"
+  },
+  {
+    "title": "Blockchain Life",
+    "description": "An annual international forum dedicated to cryptocurrencies, mining, and everything related to blockchain.",
+    "date": {
+      "start": "October 22, 2024",
+      "end": "October 23, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "forum",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "cryptocurrency",
+      "mining"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731670"
+  },
+  {
+    "title": "WAGMI",
+    "description": "The largest Web3 event in the US, featuring speakers, keynotes, and networking opportunities.",
+    "date": {
+      "start": "January 21, 2025",
+      "end": "January 24, 2025"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "Web3"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731671"
+  },
+  {
+    "title": "Crypto and Digital Assets Summit Asia",
+    "description": "A blockchain conference focusing on new trends in asset tokenization, cybersecurity, and consumer protection.",
+    "date": {
+      "start": "December 5, 2024",
+      "end": "December 5, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "digital assets"
+    ],
+    "eligibility": "unknown",
+    "organizer": "Financial Times and The Banker",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731673"
+  },
+  {
+    "title": "LA Fintech Mix Mingle Network",
+    "description": "A networking event for fintech professionals, entrepreneurs, and crypto enthusiasts.",
+    "date": {
+      "start": "October 3, 2024",
+      "end": "October 3, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "networking",
+    "mode": "offline",
+    "tech_stack": [
+      "fintech",
+      "blockchain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731674"
+  },
+  {
+    "title": "Zebu Live",
+    "description": "The largest blockchain and crypto event in the UK, featuring developers, investors, and representatives of successful Web3 projects.",
+    "date": {
+      "start": "October 10, 2024",
+      "end": "October 11, 2024"
+    },
+    "registration": {
+      "status": "unknown",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "unknown",
+      "details": "unknown"
+    },
+    "event_type": "conference",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain",
+      "crypto",
+      "Web3"
+    ],
+    "eligibility": "unknown",
+    "organizer": "unknown",
+    "source_url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+    "processed_at": "2024-12-21T10:58:11.731675"
+  },
+  {
+    "title": "Solana AI Hackathon",
+    "description": "Building AI agents and tooling on Solana, powered by SEND AI and supported by leading teams in the Solana ecosystem.",
+    "date": {
+      "start": "December 10, 2024",
+      "end": "December 23, 2024"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "210,000 USD",
+      "details": "Prizes range from $5k to $30k"
+    },
+    "event_type": "hackathon",
+    "mode": "online",
+    "tech_stack": [
+      "AI",
+      "blockchain",
+      "Solana"
+    ],
+    "eligibility": "unknown",
+    "organizer": "SEND AI and Solana ecosystem teams",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:58:38.317762"
+  },
+  {
+    "title": "AI Agents on BNB Chain: Standards, Innovation, Impact",
+    "description": "Celebration of groundbreaking innovation, designed to push the boundaries of what's possible at the intersection of AI and blockchain.",
+    "date": {
+      "start": "December 12, 2024",
+      "end": "January 10, 2025"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "500,000 USD",
+      "details": "unknown"
+    },
+    "event_type": "developer camp",
+    "mode": "online",
+    "tech_stack": [
+      "AI",
+      "blockchain",
+      "BNB Chain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "APRO Oracle, Bewater, and BNB Chain Ecosystem",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:58:38.317776"
+  },
+  {
+    "title": "HashKey Hacker House Taichi",
+    "description": "Explore the innovative space of blockchain technology within a compliance framework.",
+    "date": {
+      "start": "December 20, 2024",
+      "end": "December 22, 2024"
+    },
+    "registration": {
+      "status": "open",
+      "url": "unknown"
+    },
+    "prizes": {
+      "total_pool": "7,000 USD",
+      "details": "unknown"
+    },
+    "event_type": "hackathon",
+    "mode": "offline",
+    "tech_stack": [
+      "blockchain"
+    ],
+    "eligibility": "unknown",
+    "organizer": "HashKey",
+    "source_url": "https://substack.com/home/post/p-153052506?utm_campaign=post&utm_medium=web",
+    "processed_at": "2024-12-21T10:58:38.317779"
+  }
 ]
