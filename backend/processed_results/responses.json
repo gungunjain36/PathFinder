@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Various",
+        "description": "Upcoming cryptocurrency and blockchain events",
+        "date": "unknown",
+        "registration": "unknown",
+        "prizes": "unknown",
+        "event_type": "various",
+        "mode": "unknown",
+        "tech_stack": [
+            "Blockchain",
+            "Cryptocurrency"
+        ],
+        "is_active": true,
+        "url": "https://coinband.io/blog/top-upcoming-cryptocurrency-and-blockchain-events",
+        "processed_at": "2024-12-21T08:13:18.106551"
+    },
+    {
+        "title": "unknown",
+        "description": "unknown",
+        "date": "unknown",
+        "registration": "unknown",
+        "prizes": "unknown",
+        "event_type": "unknown",
+        "mode": "unknown",
+        "tech_stack": [],
+        "is_active": false,
+        "url": "https://cryptoslate.com/press-releases/paris-blockchain-week-2025-introduces-new-hybrid-hackathon-to-build-the-future-of-blockchain/",
+        "processed_at": "2024-12-21T08:13:23.786258"
+    },
+    {
+        "title": "Sample Hackathon",
+        "description": "",
+        "date": "January 15, 2024",
+        "registration": "unknown",
+        "prizes": "10,000",
+        "event_type": "hackathon",
+        "mode": "online",
+        "tech_stack": [],
+        "is_active": "unknown",
+        "url": "https://example.com/hackathon",
+        "processed_at": "2024-12-21T08:13:29.306250"
+    }
+]
